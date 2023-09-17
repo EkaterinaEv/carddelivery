@@ -10,13 +10,12 @@ public class CardDeliveryTest {
         open("http://localhost:9999");
         SelenideElement form = $("[action]");
         form.$("[data-test-id=city] input").setValue("Москва");
-        form.$("[calendar] input").setValue("21.09.2023");
-        form.$("[name] input").setValue("Екатерина Е");
-        form.$("[phone] input").setValue("+79110000000");
+        form.$("[data-test-id=date] input").setValue("21.09.2023");
+        form.$("[data-test-id=name] input").setValue("Екатерина Е");
+        form.$("[data-test-id=phone] input").setValue("+79110000000");
         form.$("[data-test-id=agreement]").click();
         form.$("[role]").click();
         form.$("[data-test-id=notification]");
     }
-
 }
 
